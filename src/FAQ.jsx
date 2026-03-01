@@ -46,16 +46,16 @@ function FAQ() {
           className="border-blue-500 
           shadow-[0_0_5px_#00bfff] border rounded-lg mb-3 overflow-hidden w-full max-w-full "
        >
-          <div className="flex justify-between gap-2 p-2 sm:p-3 md:p-4 w-full cursor-pointer 
-          shadow-[inset_0_0_10px_#00bfff,0_0_30px_#00bfff]  hover:bg-[#0ba9de]">
+          <div 
+           onClick={() => setOpenIndex(openIndex === index ? null : index) }
+           className="flex justify-between gap-2 p-2 sm:p-3 md:p-4 w-full cursor-pointer 
+           shadow-[inset_0_0_10px_#00bfff,0_0_30px_#00bfff]  hover:bg-[#0ba9de]">
             <span className="text-[#e0f7ff] sm:text-base md:text-lg font-medium" >
               {faq.question}
             </span>
             <button
-              onClick={() =>
-                setOpenIndex(openIndex === index ? null : index)
-              }
-            className="text-[#00bfff] text-xl hover:text-white">
+             
+            className="text-[#6adaff] text-xl ">
               {openIndex === index ? <FiMinusCircle /> :  <FiPlusCircle />}
             </button>
           </div>
